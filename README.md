@@ -13,4 +13,5 @@ For specific function. For my own convenience. Remind owner to share data to ano
 *赠送流量48小时内有效，独立计算，转赠将更新Shared Data的时间。*
 
 ![image](https://user-images.githubusercontent.com/6715610/142747001-9c73438b-df7f-4391-ac9b-07fdc422169f.png)
+
 基于Python、Selenium实现，电脑端需要配置环境。考虑后期迁移Github Actions/服务器端。
