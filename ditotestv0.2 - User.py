@@ -4,9 +4,17 @@ import re
 import time
 from dateutil import parser
 import datetime
+api = "https://sctapi.ftqq.com/【填入你的Server酱stkey】.send"
 
 def check_func(word, url):
     return url in word
+
+def send_server(receiver, text):
+    data = {
+        'text':receiver, #标题
+        'desp':text} #内容
+    result = requests.post(api, data = data)
+    return(result)
 
 driver=webdriver.Chrome()
 #打开 DITO 个人登录页
@@ -47,4 +55,13 @@ if check_func(sharedvailddata1[0], 'MB'):
 else:
     print("流量充足")
 
-#TBD 基于Server酱的消息通知
+if check_func(str(parser.parse(sharedvaildtime[0])-nowtime), 'day'):
+    if check_func(sharedvailddata1[0], 'MB'):
+        req = send_server("DITO流量不足","DITO时间：**" + str(parser.parse(sharedvaildtime[0])-nowtime) + "** DITO流量：**" + sharedvailddata[0] + "MB**")
+    else:
+        sleep(1)
+else:
+    if check_func(sharedvailddata1[0], 'MB'):
+        req = send_server("DITO时间、流量不足","DITO时间：**" + str(parser.parse(sharedvaildtime[0])-nowtime) + "** DITO流量：**" + sharedvailddata[0] + "MB**")
+    else:
+        req = send_server("DITO时间不足","DITO时间：**" + str(parser.parse(sharedvaildtime[0])-nowtime) + "** DITO流量：**" + sharedvailddata[0] + "MB**")
