@@ -39,3 +39,4 @@ jobs:
           sudo cp -p ./chrome/chromedriver /usr/bin/
           chmod -R 777 /usr/bin/chromedriver
           python ./ditotestv0.3.py
+ 
