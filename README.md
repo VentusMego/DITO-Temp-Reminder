@@ -14,7 +14,9 @@ For specific function. For my own convenience. Remind owner to share data to ano
 
 ![image](https://user-images.githubusercontent.com/6715610/142747001-9c73438b-df7f-4391-ac9b-07fdc422169f.png)
 
-基于Python、Selenium实现，电脑端需要配置环境。考虑后期迁移Github Actions/服务器端。
+基于Python、Selenium实现，电脑端需要配置环境。已经迁移至Github Actions/服务器端。在Setting>Sercets填入自己的手机&六位密码&SCKey即可使用。
 
 实现结果如下（后期迁移到线上无头浏览器，Chrome仅作展示、调试使用）：
 <img width="960" alt="86cdc9434195631f05d4074fe306838" src="https://user-images.githubusercontent.com/6715610/142888225-c8178683-1d26-4056-b681-ab4532c3fbee.png">
+
+TBD：另一部手机的自动充值（目前OTP渠道不确定如何实现）
