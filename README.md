@@ -1,6 +1,8 @@
 # DITO-Temp-Reminder
 ## DITO查询、转赠流量插件（Auto refer and share Data to another DITO User）
 
+<img alt="APM" src="https://img.shields.io/apm/l/vim-mode?style=plastic"><img alt="GitHub Pipenv locked Python version" src="https://img.shields.io/github/pipenv/locked/python-version/metabolize/rq-dashboard-on-heroku?style=plastic">
+
 For specific function. For my own convenience. Remind owner to share data to another DITO user.
 本插件是非官方第三方插件，仅限学习交流使用，不作为自己盈利项目，不保证维护。
 
