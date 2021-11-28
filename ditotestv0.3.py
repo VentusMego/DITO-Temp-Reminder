@@ -40,12 +40,12 @@ driver.find_element_by_css_selector(".ant-input:nth-child(2)").send_keys(SECRETP
 driver.find_element_by_id("PasswordLoginForm_password").send_keys(SECRETPASS)
 driver.find_element_by_css_selector(".ant-btn > span").click()
 #logged in 但有弹窗，因为没有Cookies
-sleep(0.5)
+sleep(2)
 #/html/body/div[2]/div/div[2]/div/div[2]/div[3]/button[2]
 # 
 driver.find_element_by_xpath("//*/div[2]/div/div[2]/div/div[2]/div[3]/button[2]").click()
 #driver.get("https://my.dito.ph/pto/home")
-sleep(0.5)
+sleep(2)
 #进入个人页，即抓取页面
 html = driver.page_source   #抓取页面内容
 #print(html)，内有具体流量内容
