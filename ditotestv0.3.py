@@ -40,12 +40,12 @@ driver.find_element_by_css_selector(".ant-input:nth-child(2)").send_keys(SECRETP
 driver.find_element_by_id("PasswordLoginForm_password").send_keys(SECRETPASS)
 driver.find_element_by_css_selector(".ant-btn > span").click()
 #logged in 但有弹窗，因为没有Cookies
-sleep(2)
+sleep(0.5)
 #/html/body/div[2]/div/div[2]/div/div[2]/div[3]/button[2]
 # 
 driver.find_element_by_xpath("//*/div[2]/div/div[2]/div/div[2]/div[3]/button[2]").click()
 #driver.get("https://my.dito.ph/pto/home")
-sleep(2)
+sleep(0.5)
 #进入个人页，即抓取页面
 html = driver.page_source   #抓取页面内容
 #print(html)，内有具体流量内容
@@ -76,7 +76,6 @@ if check_func(str(parser.parse(sharedvaildtime[0])-nowtime), 'day'):
     if check_func(sharedvailddata1[0], 'MB'):
         req = send_server("DITO流量不足","DITO时间：**" + str(parser.parse(sharedvaildtime[0])-nowtime) + "** DITO流量：**" + sharedvailddata[0] + "MB**")
     else:
-        sleep(1)
         print("完全充足，测试成功")
 else:
     if check_func(sharedvailddata1[0], 'MB'):
